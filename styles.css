@@ -1,80 +1,105 @@
-/* Dark Tech Theme */
-body {
-    background: radial-gradient(circle, #000428, #004e92);
-    color: white;
-    text-align: center;
-    font-family: Arial, sans-serif;
+/* Reset default styles */
+* {
     margin: 0;
     padding: 0;
-    overflow: hidden;
-}
-
-/* Header */
-header {
-    padding: 50px 20px;
-}
-
-.logo {
-    width: 150px;
-    animation: glow 1.5s infinite alternate;
-}
-
-h1 {
-    font-size: 2.5rem;
-    text-shadow: 0 0 10px cyan;
-}
-
-p {
-    font-size: 1.2rem;
-}
-
-/* Social Links */
-.social-links {
-    margin: 20px 0;
-}
-
-.social-links a {
-    display: inline-block;
-    margin: 10px;
-    padding: 10px 20px;
-    font-size: 1.2rem;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
     text-decoration: none;
-    color: white;
-    border: 2px solid cyan;
+}
+
+/* Body Background */
+body {
+    background: #000a2e;
+    color: #fff;
+    text-align: center;
+}
+
+/* Navigation Bar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00bcd4;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background: url('images/background.jpg') no-repeat center/cover;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #00bcd4;
+    color: #fff;
+    font-size: 18px;
     border-radius: 5px;
     transition: 0.3s;
 }
 
-.social-links a:hover {
-    background: cyan;
-    color: black;
+.btn:hover {
+    background: #008ba3;
 }
 
-/* Video */
-.video-container {
-    margin: 40px auto;
-    width: 80%;
-    max-width: 600px;
+/* About Section */
+.about {
+    padding: 80px 20px;
+    background: #111;
+}
+
+/* Contact Section */
+.contact {
+    padding: 60px 20px;
+    background: #222;
+}
+
+.social-links a {
+    color: #00bcd4;
+    font-size: 20px;
+    margin: 10px;
+    display: inline-block;
 }
 
 /* Footer */
 footer {
-    margin-top: 50px;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.3);
-}
-
-/* Shooting Stars */
-.stars, .shooting-stars {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-}
-
-@keyframes glow {
-    from { filter: drop-shadow(0 0 5px cyan); }
-    to { filter: drop-shadow(0 0 15px cyan); }
+    padding: 20px;
+    background: #000;
+    font-size: 14px;
 }
