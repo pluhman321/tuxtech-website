@@ -1,52 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TuxTech - Tech Content Creator</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="TuxTech - Tech tutorials and coding content." />
+  <title>TuxTech - Tech Content Creator</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script defer src="script.js"></script>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <header>
-        <nav>
-            <a href="https://www.tiktok.com/@tuxxtech" target="_blank">TikTok</a>
-            <a href="https://www.youtube.com/@TuxTech-x9s" target="_blank">YouTube</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+  <header>
+    <div class="logo">TuxTech</div>
+    <nav>
+      <a href="https://www.tiktok.com/@tuxxtech" target="_blank">TikTok</a>
+      <a href="https://www.youtube.com/@TuxTech-x9s" target="_blank">YouTube</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">🌓</button>
+  </header>
 
+  <main>
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-text">
-            <h1>Welcome to My Page I Am TuxTech</h1>
-            <p>Tech tutorials and coding</p>
-            <a href="https://www.youtube.com/@TuxTech-x9s" target="_blank" class="btn">Watch Now</a>
-        </div>
-        <!-- Removed the TuxTech logo -->
-        <!-- <img src="images/tuxtech-logo.svg" alt="TuxTech Logo" class="hero-img"> -->
+      <div class="hero-text">
+        <h1>Welcome to My Page, I Am TuxTech</h1>
+        <p>Tech tutorials, coding tips, and more!</p>
+        <a href="https://www.youtube.com/@TuxTech-x9s" target="_blank" class="btn">Watch Now</a>
+      </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
-        <h2>About TuxTech</h2>
-        <p>Sharing tech knowledge, coding tutorials, and Linux tricks to help you level up your skills!</p>
+    <section id="about" class="about section">
+      <h2>About TuxTech</h2>
+      <p>
+        Sharing tech knowledge, coding tutorials, and Linux tricks to help you level up your skills!
+      </p>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <p>Follow me on social media for more content!</p>
-        <div class="social-links">
-            <a href="https://www.tiktok.com/@tuxxtech" target="_blank">TikTok</a>
-            <a href="https://www.youtube.com/@TuxTech-x9s" target="_blank">YouTube</a>
-        </div>
+    <section id="contact" class="contact section">
+      <h2>Contact Me</h2>
+      <p>Follow me on social media or drop a message below:</p>
+      <form id="contact-form">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
     </section>
+  </main>
 
-    <footer>
-        <p>© 2025 TuxTech. All Rights Reserved.</p>
-    </footer>
+  <button id="back-to-top" aria-label="Back to Top">↑</button>
+
+  <footer>
+    <p>© 2025 TuxTech. All Rights Reserved.</p>
+  </footer>
 </body>
 </html>
