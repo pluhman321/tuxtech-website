@@ -1,31 +1,45 @@
-/* Shooting Stars Effect */
-.shooting-star {
-    position: absolute;
-    width: 100px;
-    height: 2px;
-    background: linear-gradient(-45deg, rgba(95, 145, 255, 1), rgba(0, 0, 255, 0));
-    border-radius: 999px;
-    filter: drop-shadow(0 0 6px rgba(105, 155, 255, 1));
-    animation: tail 3s ease-in-out, shooting 3s ease-in-out;
+/* Shooting Star Effect */
+function createShootingStar() {
+  const star = document.createElement('div');
+  star.classList.add('shooting-star');
+  star.style.top = Math.random() * window.innerHeight + 'px';
+  star.style.left = '-100px';
+  document.body.appendChild(star);
+  setTimeout(() => star.remove(), 3000);
 }
+setInterval(createShootingStar, 5000);
 
-@keyframes tail {
-    0% {
-        width: 0;
-    }
-    30% {
-        width: 100px;
-    }
-    100% {
-        width: 0;
-    }
-}
+/* Dark/Light Mode Toggle */
+const themeToggleBtn = document.getElementById('theme-toggle');
+themeToggleBtn.addEventListener('click', () => {
+  document.body.classList.toggle('light-mode');
+});
 
-@keyframes shooting {
-    0% {
-        transform: translateX(0);
+/* Back to Top Button */
+const backToTopBtn = document.getElementById('back-to-top');
+window.addEventListener('scroll', () => {
+  backToTopBtn.style.display = window.pageYOffset > 300 ? 'block' : 'none';
+});
+backToTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+/* Section Reveal on Scroll */
+const sections = document.querySelectorAll('.section');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
     }
-    100% {
-        transform: translateX(300px);
-    }
-}
+  });
+}, { threshold: 0.2 });
+sections.forEach(section => observer.observe(section));
+
+/* Contact Form Submission */
+const contactForm = document.getElementById('contact-form');
+contactForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  alert('Thank you for reaching out! This is a demo form.');
+  contactForm.reset();
+});
